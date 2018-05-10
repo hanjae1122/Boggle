@@ -14,10 +14,6 @@ Using the Metropolis-Hastings algorithm to find the maximum number of words in t
 
 # Instructions<a id="sec-2" name="sec-2"></a>
 
-Run the file with 
-
-\begin{equation*}
-x\_{norm}^{(i)}=\frac{x^{(i)}-x\_{min}}{x\_{max}-x\_{min}}
-\end{equation*}:
+Run the file with n being number of steps to run the algorithm:
 
     python3 mh4.py n
