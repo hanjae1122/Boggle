@@ -95,7 +95,6 @@ def main():
     print('\nReading in dictionary from {0}...'.format(DATAPATH))
     with open(DATAPATH) as f:
         for word in f:
-            # string \n
             w = word.rstrip()
             length = len(w)
             if length >= 3 and length <= DIM**2:
@@ -137,14 +136,8 @@ def main():
         roll_key = ''.join(new_roll)
         if roll_key in scores:
             new = scores[roll_key]
-            # print('Dictionary in trial {0}'.format(i))
         else:
             scores[roll_key] = new = score(new_roll)
-        # print(dice)
-        # print(roll, old_score)
-        # print(new_dice)
-        # print(new_roll, new_score)
-        # print(new_score / old_score)
         if random.uniform(0, 1) < (np.exp(new[0] - old[0])):
             max_words.append(new[0])
             dice = new_dice
